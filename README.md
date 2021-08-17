@@ -1,5 +1,7 @@
 ![sola](https://user-images.githubusercontent.com/60090391/129759666-ba0d6977-032c-4914-b317-7240e79b9aff.gif)
 
+**배포 주소**
+https://wanted-freeonboarding.github.io/Sorting-Machine/
 
 **과제 요약**
 
