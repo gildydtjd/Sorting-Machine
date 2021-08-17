@@ -1,0 +1,12 @@
+.result-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.result-info {
+  border: 2px solid gold;
+  width: 100%;
+  padding: 45px;
+}

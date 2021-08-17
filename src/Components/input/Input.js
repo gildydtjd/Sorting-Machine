@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { bubbleSort, isNumber } from "../../utils";
-
-const TIMES = 3;
+import React, { useState } from "react";
+import { bubbleSort } from "../../utils";
+import { TIMES, REG } from "./constant";
+import "./input.css";
 
 function Input({ setNumArr, setTictoc, tictoc }) {
   const [pushNum, setPushNum] = useState("");
@@ -20,11 +20,11 @@ function Input({ setNumArr, setTictoc, tictoc }) {
 
   const numClick = (e) => {
     e.preventDefault();
-    const re = /\s*(?:,|$)\s*/; // 공백을 제거하며 , 기준으로 자를 수 있는 정규 표현식
     const parsedArr = pushNum
-      .split(re)
-      .filter((item) => item !== "")
-      .map((num) => Number(num)); // 연속 콤마 제거
+      .split(REG)
+      .filter((item) => item !== "") // 연속 콤마 제거
+      .map((num) => Number(num));
+    // 숫자가 들어오지 않는 경우와, 숫자가 아닌 경우의 NaN에 대한 예외처리
     if (parsedArr.length === 0 || parsedArr.some((item) => item !== item)) {
       alert("올바르지 않은 형식입니다.");
     } else {
@@ -37,19 +37,20 @@ function Input({ setNumArr, setTictoc, tictoc }) {
   };
 
   return (
-    <div>
-      <form onSubmit={numClick}>
-        <input type="text" onChange={numChange} value={pushNum}></input>
-        <button>클릭</button>
-      </form>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "200px",
-        }}
-      ></div>
+    <div className="input-box">
+      <div className="input-info">
+        <form onSubmit={numClick}>
+          <input
+            type="text"
+            onChange={numChange}
+            value={pushNum}
+            placeholder="숫자,숫자 형식으로 입력"
+          ></input>
+          <div style={{ marginTop: "20px" }}>
+            <button>시작 버튼</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

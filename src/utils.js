@@ -1,7 +1,3 @@
-export function isNumber(n) {
-  return Number(n) === n;
-}
-
 export function bubbleSort(numArr) {
   const len = numArr.length;
   const newArr = [...numArr];

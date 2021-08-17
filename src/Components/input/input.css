@@ -1,0 +1,14 @@
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0px;
+  margin: 20px 0px;
+  border: 1px solid #fff;
+}
+
+.input-info {
+  width: 100%;
+  padding: 10px;
+}
