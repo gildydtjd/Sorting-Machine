@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import './timer.css';
 function Timer({ Language }) {
   const [time, setTime] = useState(new Date());
   const [dayOfWeek, setDayOfWeek] = useState('');
@@ -78,6 +78,8 @@ function Timer({ Language }) {
         <div
           style={{ width: '25%', padding: '20px', border: '1px solid #c9c9c9' }}
         >
+          <span>{time.getHours()}h</span> <span>{time.getMinutes()}m</span>
+          <span>{time.getSeconds()}s</span>
           <span>{EnglishMonth}</span>
           <span>{dayOfWeek}</span> <span>{time.getDate()}</span>{' '}
           <span>{time.getFullYear()}</span>
@@ -87,8 +89,11 @@ function Timer({ Language }) {
           style={{ width: '25%', padding: '20px', border: '1px solid #c9c9c9' }}
         >
           <span>{time.getFullYear()}년</span>
-          {time.getMonth() + 1}월<span>{time.getDate()}일</span>
-          <span> {dayOfWeek}</span>
+          <span>{time.getMonth() + 1}월</span>
+          <span>{time.getDate()}일</span>
+          <span>{dayOfWeek}</span>
+          <span>{time.getHours()}시</span> <span>{time.getMinutes()}분</span>
+          <span>{time.getSeconds()}초</span>
         </div>
       )}
     </div>
