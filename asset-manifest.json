@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Sorting-Machine/static/css/main.2d3c445f.chunk.css",
-    "main.js": "/Sorting-Machine/static/js/main.0ff0b87a.chunk.js",
-    "main.js.map": "/Sorting-Machine/static/js/main.0ff0b87a.chunk.js.map",
-    "runtime-main.js": "/Sorting-Machine/static/js/runtime-main.89b14027.js",
-    "runtime-main.js.map": "/Sorting-Machine/static/js/runtime-main.89b14027.js.map",
-    "static/js/2.b2149fb8.chunk.js": "/Sorting-Machine/static/js/2.b2149fb8.chunk.js",
-    "static/js/2.b2149fb8.chunk.js.map": "/Sorting-Machine/static/js/2.b2149fb8.chunk.js.map",
-    "static/js/3.52c42a43.chunk.js": "/Sorting-Machine/static/js/3.52c42a43.chunk.js",
-    "static/js/3.52c42a43.chunk.js.map": "/Sorting-Machine/static/js/3.52c42a43.chunk.js.map",
-    "index.html": "/Sorting-Machine/index.html",
-    "static/css/main.2d3c445f.chunk.css.map": "/Sorting-Machine/static/css/main.2d3c445f.chunk.css.map",
-    "static/js/2.b2149fb8.chunk.js.LICENSE.txt": "/Sorting-Machine/static/js/2.b2149fb8.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Sorting-Machine/static/media/moon.2e784dc4.jpg"
+    "main.css": "/SortingMachine/static/css/main.c526d527.chunk.css",
+    "main.js": "/SortingMachine/static/js/main.7ade94de.chunk.js",
+    "main.js.map": "/SortingMachine/static/js/main.7ade94de.chunk.js.map",
+    "runtime-main.js": "/SortingMachine/static/js/runtime-main.cc2cc3d3.js",
+    "runtime-main.js.map": "/SortingMachine/static/js/runtime-main.cc2cc3d3.js.map",
+    "static/js/2.722f71ef.chunk.js": "/SortingMachine/static/js/2.722f71ef.chunk.js",
+    "static/js/2.722f71ef.chunk.js.map": "/SortingMachine/static/js/2.722f71ef.chunk.js.map",
+    "static/js/3.2761ce0f.chunk.js": "/SortingMachine/static/js/3.2761ce0f.chunk.js",
+    "static/js/3.2761ce0f.chunk.js.map": "/SortingMachine/static/js/3.2761ce0f.chunk.js.map",
+    "index.html": "/SortingMachine/index.html",
+    "static/css/main.c526d527.chunk.css.map": "/SortingMachine/static/css/main.c526d527.chunk.css.map",
+    "static/js/2.722f71ef.chunk.js.LICENSE.txt": "/SortingMachine/static/js/2.722f71ef.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/SortingMachine/static/media/moon.2e784dc4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.89b14027.js",
-    "static/js/2.b2149fb8.chunk.js",
-    "static/css/main.2d3c445f.chunk.css",
-    "static/js/main.0ff0b87a.chunk.js"
+    "static/js/runtime-main.cc2cc3d3.js",
+    "static/js/2.722f71ef.chunk.js",
+    "static/css/main.c526d527.chunk.css",
+    "static/js/main.7ade94de.chunk.js"
   ]
 }
