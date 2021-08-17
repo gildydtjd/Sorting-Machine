@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Result from './Result';
 
 function Input(props) {
   const [num, setNum] = useState([]);
@@ -27,9 +28,6 @@ function Input(props) {
 
   return (
     <div>
-      <input type="text" onChange={numChange} value={pushNum}></input>
-      <button onClick={numClick}>클릭</button>
-
       <div
         style={{
           display: 'flex',
@@ -38,7 +36,24 @@ function Input(props) {
           height: '200px',
         }}
       >
-        {numRender}
+        <div
+          style={{
+            border: '1px solid #c9c9c9',
+            width: '25%',
+            padding: '40px 10px',
+          }}
+        >
+          <input type="number" onChange={numChange} value={pushNum}></input>
+          <button onClick={numClick}>클릭</button>
+
+          <div style={{ margin: '30px' }}>{numRender}</div>
+          <div>
+            <button>Sorting 시작</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Result inputData={num} />
       </div>
     </div>
   );

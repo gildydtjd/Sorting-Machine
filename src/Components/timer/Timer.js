@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Timer({ Language }) {
   const [time, setTime] = useState(new Date());
   const [dayOfWeek, setDayOfWeek] = useState('');
+  const [EnglishMonth, setEnglishMonth] = useState('');
 
   const TimeChange = () => {
     setInterval(() => {
@@ -36,9 +37,28 @@ function Timer({ Language }) {
     setDayOfWeek(week[new Date().getDay()]);
   }
 
+  function getEnglishMonth() {
+    var month = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+    setEnglishMonth(month[new Date().getMonth()]);
+  }
+
   useEffect(() => {
     if (Language) {
       getEnglishDate();
+      getEnglishMonth();
     } else {
       getKoreanDate();
     }
@@ -46,10 +66,31 @@ function Timer({ Language }) {
   }, [Language]);
 
   return (
-    <div>
-      {time.getFullYear()}년 {time.getMonth() + 1}월 {time.getDate()}일{' '}
-      {dayOfWeek} {time.getHours()}시 {time.getMinutes()}분 {time.getSeconds()}
-      초
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '30px',
+      }}
+    >
+      {Language ? (
+        <div
+          style={{ width: '25%', padding: '20px', border: '1px solid #c9c9c9' }}
+        >
+          <span>{EnglishMonth}</span>
+          <span>{dayOfWeek}</span> <span>{time.getDate()}</span>{' '}
+          <span>{time.getFullYear()}</span>
+        </div>
+      ) : (
+        <div
+          style={{ width: '25%', padding: '20px', border: '1px solid #c9c9c9' }}
+        >
+          <span>{time.getFullYear()}년</span>
+          {time.getMonth() + 1}월<span>{time.getDate()}일</span>
+          <span> {dayOfWeek}</span>
+        </div>
+      )}
     </div>
   );
 }
