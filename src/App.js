@@ -10,11 +10,13 @@ function App() {
 
   return (
     <div className="App">
-      <Timer />
-      <Input setNumArr={setNumArr} setTictoc={setTictoc} tictoc={tictoc} />
-      <Result numArr={numArr} />
-      {tictoc === 0 && <Result numArr={[...numArr].reverse()} />}
-      <Timer Language />
+      <div>
+        <Timer />
+        <Input setNumArr={setNumArr} setTictoc={setTictoc} tictoc={tictoc} />
+        <Result numArr={numArr} />
+        {tictoc === 0 && <Result numArr={[...numArr].reverse()} />}
+        <Timer Language />
+      </div>
     </div>
   );
 }
