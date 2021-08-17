@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { isNumber } from "../../utils";
+import React, { useEffect, useState } from "react";
+import { bubbleSort, isNumber } from "../../utils";
 
-function Input(props) {
+const TIMES = 3;
+
+function Input({ setNumArr, setTictoc, tictoc }) {
   //const [num, setNum] = useState([]);
   const [pushNum, setPushNum] = useState("");
   //const [numArr, setNumArr] = useState([]);
@@ -14,22 +16,31 @@ function Input(props) {
     setPushNum("");
   };
 
+  const countThree = () => {
+    setTimeout(() => setTictoc((tictoc) => tictoc - TIMES), 1000 * TIMES);
+    console.log(tictoc);
+  };
+
   const numClick = (e) => {
     e.preventDefault();
     const re = /\s*(?:,|$)\s*/; // 공백을 제거하며 , 기준으로 자를 수 있는 정규 표현식
-    const numArr = pushNum.split(re).filter((item) => item !== ""); // 연속 콤마 제거
-    if (
-      numArr.length === 0 ||
-      numArr.find((item) => !isNumber(item)) === undefined
-    ) {
+    const parsedArr = pushNum
+      .split(re)
+      .filter((item) => item !== "")
+      .map((num) => Number(num)); // 연속 콤마 제거
+    if (parsedArr.length === 0 || parsedArr.find((item) => !isNumber(item))) {
       console.log("올바르지 않은 형식입니다.");
     } else {
-      console.log(numArr.join(", "));
+      console.log(parsedArr.join(", "));
+      const sortedArr = bubbleSort(parsedArr);
+      setNumArr([...sortedArr]);
+      //console.log(numArr);
+      console.log(sortedArr);
     }
-    console.log(numArr);
-
+    setTictoc(TIMES);
     //setNum([...num, pushNum]);
     onReset();
+    countThree();
   };
 
   //const numRender = num.map((n, index) => {
