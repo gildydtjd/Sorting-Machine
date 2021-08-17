@@ -1,3 +1,6 @@
+![sola](https://user-images.githubusercontent.com/60090391/129759666-ba0d6977-032c-4914-b317-7240e79b9aff.gif)
+
+
 **과제 요약**
 
 - 소팅 기능을 가진 서비스입니다.
