@@ -1,5 +1,16 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 60%;
+  margin-left: 20%;
+  background-position: center;
+  background-image: url("./moon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 100vh;
 }
 
 .App-logo {

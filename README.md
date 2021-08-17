@@ -40,4 +40,8 @@
 **추가**
 
 - 과제 수행중에 참고했던 사이트가 있다면 README.md 파일에 출처를 기입합니다.
-    - 예> 정렬알고리즘 : https://정렬알고리즘.co.kr
+  - 예> 정렬알고리즘 : https://정렬알고리즘.co.kr
+
+윤수진 - bubble sort, selection sort, insertion sort, result component, input component
+
+길용성 - Timer 구현 및 css , input component
