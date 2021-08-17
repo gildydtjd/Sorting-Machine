@@ -39,12 +39,7 @@ function Input({ setNumArr, setTictoc, tictoc }) {
   return (
     <div>
       <form onSubmit={numClick}>
-        <input
-          type="text"
-          onChange={numChange}
-          value={pushNum}
-          onKeyup="this.value=this.value.replace(/[^,0-9]/g,'');"
-        ></input>
+        <input type="text" onChange={numChange} value={pushNum}></input>
         <button>클릭</button>
       </form>
       <div
